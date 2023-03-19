@@ -6,22 +6,39 @@ namespace PracticasHerencia
     {
         static void Main(string[] args)
         {
-
+            
             Caballo miBabieca=new Caballo("babieca");
 
             Humano miJuan = new Humano("Juan");
 
             Gorila miCopito = new Gorila("Copito");
 
+            //Principio de substitucion.
+            Mamiferos animal = new Mamiferos("Bucefalo");
+
+            Caballo Bucefalo = new Caballo("Bucefalo");
+
+            animal = Bucefalo;
+
+            Mamiferos[] almacenAnimales = new Mamiferos[3];
+
+            almacenAnimales[0] = miBabieca;
+            almacenAnimales[1] = miJuan;
+            almacenAnimales[2] = miCopito;
+
+            almacenAnimales[1].getNombre();
+
+            /*
             miJuan.getNombre();
 
             miBabieca.getNombre();
 
             miCopito.getNombre();
-
+            */
         }
     }
 
+    
     class Mamiferos:Object
     {
         public Mamiferos(String nombre) 
@@ -92,4 +109,5 @@ namespace PracticasHerencia
             Console.WriteLine("Soy capaz de trepar");
         }
     }
+    
 }
