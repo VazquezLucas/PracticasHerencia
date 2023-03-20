@@ -12,7 +12,7 @@ namespace PracticasHerencia
             Humano miJuan = new Humano("Juan");
 
             Gorila miCopito = new Gorila("Copito");
-
+            
             //Principio de substitucion.
             Mamiferos animal = new Mamiferos("Bucefalo");
 
@@ -28,13 +28,24 @@ namespace PracticasHerencia
 
             almacenAnimales[1].getNombre();
 
-            /*
+            for(int i=0; i < 3 ; i++)
+            {
+
+                almacenAnimales[i].pensar();
+
+            }
+
+            Mamiferos miMamifero = new Mamiferos("");
+
+            miMamifero.respirar();
+
+            
             miJuan.getNombre();
 
             miBabieca.getNombre();
 
             miCopito.getNombre();
-            */
+            
         }
     }
 
@@ -51,6 +62,11 @@ namespace PracticasHerencia
         public void respirar()
         {
             Console.WriteLine("Soy capaz de respirar");
+        }
+
+        public virtual void pensar()
+        {
+            Console.WriteLine("Pensamiento básico instintivo");
         }
 
         public void cuidarCrias()
@@ -90,7 +106,7 @@ namespace PracticasHerencia
 
 
         }
-        public void pensar()
+        public override void pensar()
         {
             Console.WriteLine("Soy capaz de pensar ¿?");
         }
@@ -103,6 +119,11 @@ namespace PracticasHerencia
 
 
 
+        }
+
+        public override void pensar()
+        {
+            Console.WriteLine("Pensamiento instintivo avanzado");
         }
         public void trepar()
         {
